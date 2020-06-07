@@ -8,7 +8,9 @@ import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar'
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter'
 import HeightIcon from '@material-ui/icons/Height'
 import List from '@material-ui/core/List'
+
 import { LargeAvatar } from './AthleteDetail.styled.components'
+
 import PropTypes from 'prop-types'
 
 const AthleteDetail = (props) => (
