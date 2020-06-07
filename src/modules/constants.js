@@ -5,7 +5,6 @@ export default {
   PATH_DETAIL: '/detail/',
   PATH_DETAIL_WITH_PARAM: '/detail/:id',
 
-  COPYRIGHT_TEXT: 'Copyright © ',
   COPYRIGHT_LINK: 'mailto://basallo.es/',
   COPYRIGHT_LINK_TEXT: 'alvaro@basallo.es',
 
