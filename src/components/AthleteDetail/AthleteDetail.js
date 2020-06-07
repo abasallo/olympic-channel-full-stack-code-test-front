@@ -1,48 +1,62 @@
 import React from 'react'
 
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline'
-import ListItemText from '@material-ui/core/ListItemText'
-import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar'
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter'
-import HeightIcon from '@material-ui/icons/Height'
-import List from '@material-ui/core/List'
-
-import { LargeAvatar } from './AthleteDetail.styled.components'
-
 import PropTypes from 'prop-types'
 
+import ReactMarkdown from 'react-markdown'
+
+import TableContainer from '@material-ui/core/TableContainer'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import TableCell from '@material-ui/core/TableCell'
+import TableBody from '@material-ui/core/TableBody'
+
+import { DetailDiv, HeaderDetailDiv, BioDetailDiv, StyledPaper, StyledTable } from './AthleteDetail.styled.components'
+
+import AthleteDetailHeader from '../AthleteDetailHeader/AthleteDetailHeader'
+
+const renderMedals = (athleteResults) => (
+  <TableContainer component={StyledPaper}>
+    <StyledTable>
+      <TableHead>
+        <TableRow>
+          <TableCell align="center">Year</TableCell>
+          <TableCell align="center">Game</TableCell>
+          <TableCell align="center">Gold</TableCell>
+          <TableCell align="center">Silver</TableCell>
+          <TableCell align="center">Bronze</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {athleteResults.map((result) => (
+          <TableRow key={result.id}>
+            <TableCell align="center">{result.game.year}</TableCell>
+            <TableCell align="center">{result.game.city}</TableCell>
+            <TableCell align="center">{result.gold}</TableCell>
+            <TableCell align="center">{result.silver}</TableCell>
+            <TableCell align="center">{result.bronze}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </StyledTable>
+  </TableContainer>
+)
+
 const AthleteDetail = (props) => (
-  <React.Fragment>
-    <LargeAvatar src={`data:${props.athlete.photo.mimeType};base64,${props.athlete.photo.photo}`} />
-    <List>
-      <ListItem>
-        <ListItemIcon>
-          <PersonOutlineIcon />
-        </ListItemIcon>
-        <ListItemText primary={props.athlete.name + ' ' + props.athlete.surname} />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <PermContactCalendarIcon />
-        </ListItemIcon>
-        <ListItemText primary={props.athlete.dateOfBirth} />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <FitnessCenterIcon />
-        </ListItemIcon>
-        <ListItemText primary={props.athlete.weight} />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <HeightIcon />
-        </ListItemIcon>
-        <ListItemText primary={props.athlete.height} />
-      </ListItem>
-    </List>
-  </React.Fragment>
+  <DetailDiv>
+    <HeaderDetailDiv>
+      <AthleteDetailHeader athlete={props.athlete} />
+    </HeaderDetailDiv>
+    <div>
+      <h1>Medals</h1>
+      {renderMedals(props.athlete.athleteResults)}
+    </div>
+    <div>
+      <h1>Bio</h1>
+      <BioDetailDiv>
+        <ReactMarkdown source={props.athlete.bio} />
+      </BioDetailDiv>
+    </div>
+  </DetailDiv>
 )
 
 AthleteDetail.propTypes = { athlete: PropTypes.object }

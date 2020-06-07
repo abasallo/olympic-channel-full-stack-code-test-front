@@ -1,6 +1,8 @@
 import React from 'react'
 
-import AthleteDetail from './AthleteDetail'
+import { shallow } from 'enzyme'
+
+import AthleteDetailHeader from './AthleteDetailHeader'
 
 const athlete = {
   id: 1,
@@ -19,4 +21,4 @@ const athlete = {
   }
 }
 
-test('Renders properly', () => expect(<AthleteDetail athlete={athlete} />).toMatchSnapshot())
+test('Renders properly', () => expect(shallow(<AthleteDetailHeader athlete={athlete} />)).toMatchSnapshot())
