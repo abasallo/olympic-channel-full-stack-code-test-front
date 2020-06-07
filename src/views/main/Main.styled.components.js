@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MaterialUIAppBar from '@material-ui/core/AppBar'
 import MaterialUIContainer from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
+import Avatar from '@material-ui/core/Avatar'
 
 import { customMUITheme as theme } from '../../customMUITheme'
 
@@ -28,4 +29,17 @@ export const Container = styled(MaterialUIContainer)`
 export const CopyrightBox = styled(Box)`
   margin-top: 25px;
   text-align: center;
+`
+
+export const HorizontalScrollDiv = styled.div`
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+`
+
+export const LargeAvatar = styled(Avatar)`
+  width: 75px;
+  height: 75px;
+  margin: 3px;
 `

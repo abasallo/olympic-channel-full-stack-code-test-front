@@ -2,11 +2,11 @@ export default {
   LOCAL_GRAPHQL_BACKEND_URL: 'http://localhost:4000/graphql',
 
   PATH_ROOT: '/',
-  PATH_DETAIL: '/detail',
+  PATH_DETAIL: '/detail/:id',
 
   COPYRIGHT_TEXT: 'Copyright © ',
-  COPYRIGHT_LINK: 'https://xplore.es/',
-  COPYRIGHT_LINK_TEXT: 'Xplore',
+  COPYRIGHT_LINK: 'mailto://basallo.es/',
+  COPYRIGHT_LINK_TEXT: 'alvaro@basallo.es',
 
   LOGO_ALT: 'Logo'
 }
