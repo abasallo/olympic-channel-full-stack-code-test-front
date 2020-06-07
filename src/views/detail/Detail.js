@@ -9,7 +9,6 @@ import {
   Logo,
   Container,
   CopyrightBox,
-  LargeAvatar,
   DetailDiv,
   HeaderDetailDiv,
   BioDetailDiv,
@@ -28,20 +27,13 @@ import { Query } from 'react-apollo'
 import { GET_ATHLETE } from '../../services/graphql/AthleteQueries'
 
 import ReactMarkdown from 'react-markdown'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline'
-import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar'
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter'
-import HeightIcon from '@material-ui/icons/Height'
 import TableContainer from '@material-ui/core/TableContainer'
 
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import TableCell from '@material-ui/core/TableCell'
 import TableBody from '@material-ui/core/TableBody'
+import AthleteDetail from '../../components/AthleteDetail/AthleteDetail'
 
 const renderMedals = (athleteResults) => (
   <TableContainer component={StyledPaper}>
@@ -70,40 +62,10 @@ const renderMedals = (athleteResults) => (
   </TableContainer>
 )
 
-const renderAthleteStats = (athlete) => (
-  <List>
-    <ListItem>
-      <ListItemIcon>
-        <PersonOutlineIcon />
-      </ListItemIcon>
-      <ListItemText primary={athlete.name + ' ' + athlete.surname} />
-    </ListItem>
-    <ListItem>
-      <ListItemIcon>
-        <PermContactCalendarIcon />
-      </ListItemIcon>
-      <ListItemText primary={athlete.dateOfBirth} />
-    </ListItem>
-    <ListItem>
-      <ListItemIcon>
-        <FitnessCenterIcon />
-      </ListItemIcon>
-      <ListItemText primary={athlete.weight} />
-    </ListItem>
-    <ListItem>
-      <ListItemIcon>
-        <HeightIcon />
-      </ListItemIcon>
-      <ListItemText primary={athlete.height} />
-    </ListItem>
-  </List>
-)
-
 const renderAthlete = (athlete) => (
   <DetailDiv>
     <HeaderDetailDiv>
-      <LargeAvatar src={`data:${athlete.photo.mimeType};base64,${athlete.photo.photo}`} />
-      {renderAthleteStats(athlete)}
+      <AthleteDetail athlete={athlete} />
     </HeaderDetailDiv>
     <div>
       <h1>Medals</h1>

@@ -15,7 +15,7 @@
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
     "clsx": "^1.1.1",
-    "graphql": "^15.0.0",
+    "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "immutability-helper": "^3.1.1",
     "react": "^16.13.1",
@@ -75,3 +75,4 @@
     "start": "react-scripts start"
   }
 }
+

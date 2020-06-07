@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders properly 1`] = `ShallowWrapper {}`;
+exports[`Renders properly 1`] = `
+<Detail
+  match={
+    Object {
+      "isExact": true,
+      "params": Object {
+        "id": 1,
+      },
+      "path": "",
+      "url": "",
+    }
+  }
+/>
+`;
