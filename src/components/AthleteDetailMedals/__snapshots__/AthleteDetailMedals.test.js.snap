@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders properly 1`] = `
+<AthleteDetailMedals
+  athleteResults={
+    Array [
+      Object {
+        "bronze": 1,
+        "game": Object {
+          "city": "Pyeongchang",
+          "id": 4,
+          "year": 2018,
+        },
+        "gold": 1,
+        "id": "1-4",
+        "silver": 1,
+      },
+      Object {
+        "bronze": 2,
+        "game": Object {
+          "city": "Sochi",
+          "id": 5,
+          "year": 2014,
+        },
+        "gold": 0,
+        "id": "1-5",
+        "silver": 1,
+      },
+      Object {
+        "bronze": 1,
+        "game": Object {
+          "city": "Vancouver",
+          "id": 6,
+          "year": 2010,
+        },
+        "gold": 0,
+        "id": "1-6",
+        "silver": 0,
+      },
+      Object {
+        "bronze": 1,
+        "game": Object {
+          "city": "Turin",
+          "id": 7,
+          "year": 2006,
+        },
+        "gold": 0,
+        "id": "1-7",
+        "silver": 0,
+      },
+    ]
+  }
+/>
+`;

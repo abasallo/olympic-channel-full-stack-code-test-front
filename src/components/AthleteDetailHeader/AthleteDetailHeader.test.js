@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { shallow } from 'enzyme'
-
 import AthleteDetailHeader from './AthleteDetailHeader'
 
 const athlete = {
@@ -21,4 +19,4 @@ const athlete = {
   }
 }
 
-test('Renders properly', () => expect(shallow(<AthleteDetailHeader athlete={athlete} />)).toMatchSnapshot())
+test('Renders properly', () => expect(<AthleteDetailHeader athlete={athlete} />).toMatchSnapshot())

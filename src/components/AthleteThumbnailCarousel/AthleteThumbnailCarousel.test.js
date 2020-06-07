@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { shallow } from 'enzyme'
-
 import AthleteThumbnailCarousel from './AthleteThumbnailCarousel'
 
 const getAthletesByGame = [
@@ -46,4 +44,4 @@ const getAthletesByGame = [
   }
 ]
 
-test('Renders properly', () => expect(shallow(<AthleteThumbnailCarousel athletesByGames={getAthletesByGame} />)).toMatchSnapshot())
+test('Renders properly', () => expect(<AthleteThumbnailCarousel athletesByGames={getAthletesByGame} />).toMatchSnapshot())
