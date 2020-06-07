@@ -8,6 +8,8 @@ import Tooltip from '@material-ui/core/Tooltip'
 
 import { Link } from 'react-router-dom'
 
+import constants from '../../modules/constants'
+
 const AthleteThumbnailCarousel = (props) => {
   const result = []
   props.athletesByGames
@@ -20,7 +22,7 @@ const AthleteThumbnailCarousel = (props) => {
           <HorizontalScrollDiv>
             {_.athletes.map((athlete) => (
               <Tooltip key={athlete.id} title={athlete.name + ' ' + athlete.surname}>
-                <Link to={`/detail/${athlete.id}`}>
+                <Link to={`${constants.PATH_DETAIL}${athlete.id}`}>
                   <LargeAvatar
                     alt={athlete.name + ' ' + athlete.surname}
                     src={`data:${athlete.photo.mimeType};base64,${athlete.photo.photo}`}

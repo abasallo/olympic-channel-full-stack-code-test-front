@@ -23,7 +23,7 @@ const App = () => {
           <CssBaseline />
           <Router>
             <Switch>
-              <Route path={constants.PATH_DETAIL}>
+              <Route path={constants.PATH_DETAIL_WITH_PARAM}>
                 <Detail />
               </Route>
               <Route path={constants.PATH_ROOT}>

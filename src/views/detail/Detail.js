@@ -1,14 +1,9 @@
 import React from 'react'
 
-import Toolbar from '@material-ui/core/Toolbar'
+import { Container, CopyrightBox } from './Detail.styled.components'
 
-import logo from '../../images/logo.png'
-
-import { AppBar, Logo, Container, CopyrightBox } from './Detail.styled.components'
-
+import Toolbar from '../../components/Toolbar/Toolbar'
 import Copyright from '../../components/Copyright/Copyright'
-
-import constants from '../../modules/constants'
 
 import { useParams } from 'react-router'
 
@@ -22,11 +17,7 @@ const Detail = () => {
   const { id } = useParams()
   return (
     <React.Fragment>
-      <AppBar position="static">
-        <Toolbar>
-          <Logo src={logo} alt={constants.LOGO_ALT} />
-        </Toolbar>
-      </AppBar>
+      <Toolbar />
       <Container>
         <Query query={GET_ATHLETE} variables={{ id }}>
           {({ loading, error, data }) => {
