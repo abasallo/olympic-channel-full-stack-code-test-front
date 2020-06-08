@@ -25,10 +25,12 @@ const Detail = () => {
           {({ loading, error, data }) => {
             if (loading) return <CircularProgress />
             if (error) return `Error: ${error.message}`
-            const result = []
-            result.push(<Typography variant="h2" component="h3">{`${data.getAthlete.name} ${data.getAthlete.surname} details`}</Typography>)
-            result.push(<AthleteDetail athlete={data.getAthlete} />)
-            return result
+            return (
+              <React.Fragment>
+                <Typography variant="h2" component="h3">{`${data.getAthlete.name} ${data.getAthlete.surname} details`}</Typography>
+                <AthleteDetail athlete={data.getAthlete} />
+              </React.Fragment>
+            )
           }}
         </Query>
       </Container>
