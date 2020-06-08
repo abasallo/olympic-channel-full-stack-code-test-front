@@ -17,6 +17,12 @@ export const GET_ATHLETES_BY_GAME = gql`
           photo
           mimeType
         }
+        athleteResults {
+          id
+          gold
+          silver
+          bronze
+        }
       }
     }
   }

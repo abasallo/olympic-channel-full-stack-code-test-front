@@ -10,7 +10,10 @@ import { Link } from 'react-router-dom'
 
 import constants from '../../modules/constants'
 
+import { sortAthletesByGameScore } from '../../modules/sorting'
+
 const AthleteThumbnailCarousel = (props) => {
+  props.athletesByGame.map((_) => (_.athletes = sortAthletesByGameScore(_)))
   const result = []
   props.athletesByGame
     .filter((_) => _.athletes.length > 0)
