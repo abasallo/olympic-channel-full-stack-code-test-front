@@ -15,6 +15,8 @@ import AthleteDetail from '../../components/AthleteDetail/AthleteDetail'
 
 import CircularProgress from '@material-ui/core/CircularProgress'
 
+import Typography from '@material-ui/core/Typography'
+
 const Detail = () => {
   const { id } = useParams()
   return (
@@ -25,7 +27,10 @@ const Detail = () => {
           {({ loading, error, data }) => {
             if (loading) return <CircularProgress />
             if (error) return `Error: ${error.message}`
-            return <AthleteDetail athlete={data.getAthlete} />
+            const result = []
+            result.push(<Typography variant="h2" component="h3">{`${data.getAthlete.name} ${data.getAthlete.surname} details`}</Typography>)
+            result.push(<AthleteDetail athlete={data.getAthlete} />)
+            return result
           }}
         </Query>
       </Container>

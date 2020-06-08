@@ -13,11 +13,16 @@ import AthleteThumbnailCarousel from '../../components/AthleteThumbnailCarousel/
 
 import CircularProgress from '@material-ui/core/CircularProgress'
 
+import Typography from '@material-ui/core/Typography'
+
 const Main = () => {
   return (
     <React.Fragment>
       <Toolbar />
       <Container>
+        <Typography variant="h2" component="h3">
+          Olympic Athletes
+        </Typography>
         <Query query={GET_ATHLETES_BY_GAME}>
           {({ loading, error, data }) => {
             if (loading) return <CircularProgress />
