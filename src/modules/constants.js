@@ -8,5 +8,7 @@ export default {
   COPYRIGHT_LINK: 'mailto://basallo.es/',
   COPYRIGHT_LINK_TEXT: 'alvaro@basallo.es',
 
-  LOGO_ALT: 'Logo'
+  LOGO_ALT: 'Logo',
+
+  MAIN_TITLE_TEXT: 'Olympic Athletes'
 }

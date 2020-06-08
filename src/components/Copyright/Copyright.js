@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Typography } from './Copyright.styled.components'
-
 import Link from '@material-ui/core/Link'
+
+import { Typography } from './Copyright.styled.components'
 
 import constants from '../../modules/constants'
 

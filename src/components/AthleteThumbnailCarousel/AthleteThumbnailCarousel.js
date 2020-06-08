@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { LargeAvatar, HorizontalScrollDiv } from './AthleteThumbnailCarousel.styled.components'
-
 import PropTypes from 'prop-types'
+
+import { Link } from 'react-router-dom'
 
 import Tooltip from '@material-ui/core/Tooltip'
 
-import { Link } from 'react-router-dom'
+import { LargeAvatar, HorizontalScrollDiv } from './AthleteThumbnailCarousel.styled.components'
 
 import constants from '../../modules/constants'
 

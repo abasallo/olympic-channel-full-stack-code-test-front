@@ -1,5 +1,7 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
+
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline'
@@ -10,8 +12,6 @@ import HeightIcon from '@material-ui/icons/Height'
 import List from '@material-ui/core/List'
 
 import { LargeAvatar } from './AthleteDetailHeader.styled.components'
-
-import PropTypes from 'prop-types'
 
 const AthleteDetailHeader = (props) => (
   <React.Fragment>

@@ -1,21 +1,19 @@
 import React from 'react'
 
+import CircularProgress from '@material-ui/core/CircularProgress'
+import Typography from '@material-ui/core/Typography'
+
 import { Container, CopyrightBox } from './Detail.styled.components'
 
-import Toolbar from '../../components/Toolbar/Toolbar'
+import AthleteDetail from '../../components/AthleteDetail/AthleteDetail'
 import Copyright from '../../components/Copyright/Copyright'
+import Toolbar from '../../components/Toolbar/Toolbar'
 
 import { useParams } from 'react-router'
 
 import { Query } from 'react-apollo'
 
-import { GET_ATHLETE } from '../../services/graphql/AthleteQueries'
-
-import AthleteDetail from '../../components/AthleteDetail/AthleteDetail'
-
-import CircularProgress from '@material-ui/core/CircularProgress'
-
-import Typography from '@material-ui/core/Typography'
+import { GET_ATHLETE } from '../../graphql/AthleteQueries'
 
 const Detail = () => {
   const { id } = useParams()

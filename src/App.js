@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { ApolloProvider } from 'react-apollo'
-import { apolloClient } from './services/graphql/apolloClient'
+import { apolloClient } from './graphql/apolloClient'
 
 import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
