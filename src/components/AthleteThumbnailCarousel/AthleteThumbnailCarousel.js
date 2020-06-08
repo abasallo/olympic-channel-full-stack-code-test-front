@@ -12,7 +12,7 @@ import constants from '../../modules/constants'
 
 const AthleteThumbnailCarousel = (props) => {
   const result = []
-  props.athletesByGames
+  props.athletesByGame
     .filter((_) => _.athletes.length > 0)
     .map((_) =>
       result.push(
@@ -37,6 +37,6 @@ const AthleteThumbnailCarousel = (props) => {
   return result
 }
 
-AthleteThumbnailCarousel.propTypes = { athletesByGames: PropTypes.array }
+AthleteThumbnailCarousel.propTypes = { athletesByGame: PropTypes.array }
 
 export default AthleteThumbnailCarousel

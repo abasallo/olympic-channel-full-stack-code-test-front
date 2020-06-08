@@ -2,7 +2,7 @@ import React from 'react'
 
 import AthleteThumbnailCarousel from './AthleteThumbnailCarousel'
 
-const getAthletesByGame = [
+const athletesByGame = [
   { game: { id: 1, city: 'Tokyo', year: 2020 }, athletes: [] },
   {
     game: { id: 2, city: 'Rio de Janeiro', year: 2016 },
@@ -44,4 +44,4 @@ const getAthletesByGame = [
   }
 ]
 
-test('Renders properly', () => expect(<AthleteThumbnailCarousel athletesByGames={getAthletesByGame} />).toMatchSnapshot())
+test('Renders properly', () => expect(<AthleteThumbnailCarousel athletesByGame={athletesByGame} />).toMatchSnapshot())

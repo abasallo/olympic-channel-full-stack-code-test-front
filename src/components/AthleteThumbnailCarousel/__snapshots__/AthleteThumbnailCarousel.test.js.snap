@@ -2,7 +2,7 @@
 
 exports[`Renders properly 1`] = `
 <AthleteThumbnailCarousel
-  athletesByGames={
+  athletesByGame={
     Array [
       Object {
         "athletes": Array [],

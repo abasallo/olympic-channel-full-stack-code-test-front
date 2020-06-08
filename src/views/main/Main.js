@@ -20,7 +20,7 @@ const Main = () => {
           {({ loading, error, data }) => {
             if (loading) return 'Loading...'
             if (error) return `Error: ${error.message}`
-            return <AthleteThumbnailCarousel athletesByGames={data.getAthletesByGame} />
+            return <AthleteThumbnailCarousel athletesByGame={data.getAthletesByGame} />
           }}
         </Query>
       </Container>
