@@ -11,6 +11,8 @@ import { GET_ATHLETES_BY_GAME } from '../../services/graphql/AthleteQueries'
 
 import AthleteThumbnailCarousel from '../../components/AthleteThumbnailCarousel/AthleteThumbnailCarousel'
 
+import CircularProgress from '@material-ui/core/CircularProgress'
+
 const Main = () => {
   return (
     <React.Fragment>
@@ -18,7 +20,7 @@ const Main = () => {
       <Container>
         <Query query={GET_ATHLETES_BY_GAME}>
           {({ loading, error, data }) => {
-            if (loading) return 'Loading...'
+            if (loading) return <CircularProgress />
             if (error) return `Error: ${error.message}`
             return <AthleteThumbnailCarousel athletesByGame={data.getAthletesByGame} />
           }}

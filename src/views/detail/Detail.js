@@ -13,6 +13,8 @@ import { GET_ATHLETE } from '../../services/graphql/AthleteQueries'
 
 import AthleteDetail from '../../components/AthleteDetail/AthleteDetail'
 
+import CircularProgress from '@material-ui/core/CircularProgress'
+
 const Detail = () => {
   const { id } = useParams()
   return (
@@ -21,8 +23,8 @@ const Detail = () => {
       <Container>
         <Query query={GET_ATHLETE} variables={{ id }}>
           {({ loading, error, data }) => {
-            if (loading) return 'Loading...'
-            if (error) return `Error! ${error.message}`
+            if (loading) return <CircularProgress />
+            if (error) return `Error: ${error.message}`
             return <AthleteDetail athlete={data.getAthlete} />
           }}
         </Query>
