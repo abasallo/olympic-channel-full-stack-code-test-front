@@ -85,7 +85,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 This assumes Docker and Docker Compose are installed.
 
-Also, copy and rename .env.docker.example to .env.docker and edit for configuration specifics (Database URL, Email, etc)
+Also, copy and rename .env.docker.example to .env.docker and edit for configuration specifics (URL, etc)
 
 This file contains the configuration to run the server as in production, but with a local Docker (that can be later deployed for real).
 
