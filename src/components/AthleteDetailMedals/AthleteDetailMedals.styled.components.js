@@ -13,3 +13,10 @@ export const StyledPaper = styled(Paper)`
   margin-left: auto;
   margin-right: auto;
 `
+
+export const Medal = styled.img`
+  flex-grow: 1;
+  max-width: 25px;
+  width: 100%;
+  height: auto;
+`

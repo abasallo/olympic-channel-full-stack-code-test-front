@@ -8,7 +8,11 @@ import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import TableBody from '@material-ui/core/TableBody'
 
-import { StyledTable, StyledPaper } from './AthleteDetailMedals.styled.components'
+import { StyledTable, StyledPaper, Medal } from './AthleteDetailMedals.styled.components'
+
+import goldMedal from '../../images/medal_gold.png'
+import silverMedal from '../../images/medal_silver.png'
+import bronzeMedal from '../../images/medal_bronze.png'
 
 const AthleteDetailMedals = (props) => (
   <div>
@@ -19,9 +23,15 @@ const AthleteDetailMedals = (props) => (
           <TableRow>
             <TableCell align="center">Year</TableCell>
             <TableCell align="center">Game</TableCell>
-            <TableCell align="center">Gold</TableCell>
-            <TableCell align="center">Silver</TableCell>
-            <TableCell align="center">Bronze</TableCell>
+            <TableCell align="center">
+              <Medal src={goldMedal} alt="Gold" />
+            </TableCell>
+            <TableCell align="center">
+              <Medal src={silverMedal} alt="Silver" />
+            </TableCell>
+            <TableCell align="center">
+              <Medal src={bronzeMedal} alt="Bronze" />
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
